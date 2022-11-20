@@ -68,12 +68,12 @@ p span.i6{
     text-align: center;
 }
 
-/* Centered dedications */
-section[epub|type~="dedication"]{
+/* Centered dedication & note */
+section[epub|type~="dedication"], section[epub|type~="note"] {
 	text-align: center;
 }
 
-section[epub|type~="dedication"] > *{
+section[epub|type~="dedication"], section[epub|type~="note"] > *{
 	display: inline-block;
 	margin: auto;
 	margin-top: 3em;
@@ -81,7 +81,7 @@ section[epub|type~="dedication"] > *{
 }
 
 @supports(display: flex){
-	section[epub|type~="dedication"]{
+	section[epub|type~="dedication"], section[epub|type~="note"] {
 		align-items: center;
 		box-sizing: border-box;
 		display: flex;
@@ -94,5 +94,10 @@ section[epub|type~="dedication"] > *{
 	section[epub|type~="dedication"] > *{
 		margin: 0;
 	}
+
+	section[epub|type~="note"] > *{
+		margin: 1em;
+		max-width: 60%;
+	}
+
 }
-/* End centered dedications */
