@@ -59,9 +59,10 @@ p span.i6{
 	text-indent: -1em;
 }
 
-.chorus{
+p span.chorus{
 	font-style: italic;
-	text-align: center;
+	margin: auto;
+	display:table;
 }
 
 #chapter-4-3 blockquote,strong {
